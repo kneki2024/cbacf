@@ -1,0 +1,18 @@
+.login-container
+  //- span.login-title
+  .form-group
+    button.login-button(type="button") CONTINUE AS GUEST
+  form#loginForm
+    .form-group
+      label(for='username') Username
+      .input-icon
+        i.fa.fa-user
+        input(type='text' class = 'username-input' placeholder='Type your username')
+    .form-group
+      label(for='password') Password
+      .input-icon
+        i.fa.fa-lock
+        input(type='password' class = 'password-input' placeholder='Type your password')
+      //- span.forget-title Forget password?
+    .form-group
+      span.sign-up-title Login

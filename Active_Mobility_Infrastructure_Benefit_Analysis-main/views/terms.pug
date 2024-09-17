@@ -1,0 +1,13 @@
+.terms-container(style = 'display:none;')
+  span.terms-title Introduction
+  .terms-text The webtool serves as a platform for estimating the economic returns, encompassing both costs and benefits, of investments in active mobility. Designed to enrich decision-making processes concerning such investments, it facilitates policy dialog and project preparation within the urban transport sector. Specifically tailored to assist public investment decision-makers in developing countries, the tool enables the assessment of economic benefits associated with various active mobility investment choices.
+  //- .basic-form-group
+    label(for="country-select") Select Country:
+    select.terms-select(id="country-select", onchange="updateCities()")
+      option(value="") --Select a Country--
+
+    label(for="city-select") Select City:
+    input.terms-select(id="city-select")
+
+  button.bas-button.terms-button(type="button") START!
+  button.bas-button.report-button(type="button") Details can be found in Report

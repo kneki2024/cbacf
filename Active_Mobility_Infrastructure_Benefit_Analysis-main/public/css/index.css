@@ -1,0 +1,560 @@
+*, *:before, *:after {
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+}
+
+@media print {
+    @page {
+        size: landscape;
+    }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 350px;
+  height: 350px;
+  position:fixed;
+}
+.login-title{
+  position: relative;
+  top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+/*  top: 60px;*/
+}
+.form-group label {
+  display: block;
+  color: rgb(90, 90, 90);
+  font-size: .8em;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;        
+
+}.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+}
+
+.form-group button {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  width: 100%;
+  font-size: .7em;
+  font-weight: bold;
+  background-size: 200% 100%; /* Larger background size for animation */
+  transition: background-position 1s, color 1s;
+}
+
+.form-group button:hover {
+  background-position: 100% 0;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Creates the line under the input */
+    padding: 5px 10px;
+}
+
+.input-icon i {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: .8em;
+}
+
+.input-icon input {
+    flex: 1; /* Makes the input take up the remaining space */
+    border: none; /* Removes the default border */
+    outline: none; /* Removes the focus outline */
+    background: none; /* Makes the background transparent */
+    font-size: .8em;
+}
+
+.forget-title{
+  display: block;
+  margin-top: 10px;
+  color: rgb(90, 90, 90);
+  font-size: .8em;
+  text-align: right;
+}
+
+.forget-title:hover{
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+
+.sign-up-title{
+  display: block;
+  margin-top: 30px;
+  color: rgb(90, 90, 90);
+  font-size: .8em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sign-up-title:hover{
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+
+.title_button{
+  max-width: 50% !important;
+}
+
+
+
+
+.terms-container{
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 400px;
+  height: 450px;
+  position:fixed;
+}
+
+.terms-title{
+  position: relative;
+  top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.terms-text{
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 150px;
+  font-size: .9em;
+}
+
+.terms-select{
+  width: 50%;
+}
+
+.terms-button{
+  height: 40px;
+  top: 50px;
+  position: relative;
+}
+
+.report-button{
+  height: 40px;
+  top: 50px;
+  position: relative;
+}
+
+
+
+
+
+
+.base-calculator-container {
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 600px;
+  height: 410px;
+  position:fixed;
+}
+
+.calculator-title{
+  position: relative;
+  top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.basic-form-group {
+  margin-bottom: 10px;
+  position: relative;
+  top: 30px;
+}
+
+.basic-form-group label {
+  display: block;
+  color: rgb(90, 90, 90);
+  font-size: .8em;
+}
+
+.select-icon {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc; /* Creates the line under the input */
+    padding: 10px 10px;
+    margin-bottom: 10px;  
+}
+
+.select-icon i {
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.basic-about{
+  display: block;
+  margin-top: 10px;
+  color: rgb(90, 90, 90);
+  font-size: .9em;
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  margin: 10px;
+}
+
+.basic-about:hover{
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+
+.param-form-group{
+  width: 60%;
+  position: absolute;
+}
+
+.param-icon {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Creates the line under the input */
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.param-icon i {
+    color: #ccc;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.param-icon input {
+    flex: 1; /* Makes the input take up the remaining space */
+    border: none; /* Removes the default border */
+    outline: none; /* Removes the focus outline */
+    background: none; /* Makes the background transparent */
+    font-size: .8em;
+}
+
+.cal-button-group{
+  position: absolute;
+  right: 0px;
+  width: 35%;
+}
+
+.bas-button{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100%;
+  font-size: .7em;
+  font-weight: bold;
+  background-size: 200% 100%; /* Larger background size for animation */
+  transition: background-position 1s, color 1s;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bas-button:hover {
+  background-position: 100% 0;
+}
+
+.cal-button{
+  height: 154px;
+}
+
+.adv-button{
+  height: 196px;
+}
+
+.descript-box{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  font-size: .8em;
+  color: #aaa;
+  background: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #d0d0d0; /* Subtle shadow as border */
+  display: none;
+  z-index: 2;
+}
+
+
+
+
+.param-editor{
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 800px;
+  height: 550px;
+  position:fixed;
+}
+
+.par-add-button{
+  right: 280px;
+}
+
+.par-del-button{
+  right: 140px;
+  background: #CC0000 !important;
+}
+
+.par-del-button:hover{
+  text-shadow: 0 0 10px #FF6666, 0 0 10px #FF6666, 0 0 10px #FF6666;
+}
+
+.par-bak-button{
+  right: 0px;
+}
+
+.param-container-edit{
+  top: 10px;
+  position: relative;
+  height: 131px;
+}
+
+
+
+
+
+
+.results-container{
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 900px;
+  height: 800px;
+  position:fixed;
+}
+
+.summary-container{
+  width: 100%;
+  height: 200px;
+}
+
+.chart-container{
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+}
+
+.impact-container{
+  padding-left: 5%;
+  width: 27%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.impact-title{
+  color: #555;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+.impact-text{
+  position: absolute;
+  padding-top: 20px;
+  color: #555;
+}
+
+.impact-text-2{
+  position: absolute;
+  padding-top: 50px;
+  color: #555;
+}
+
+.con_cost_container{
+  color: #555;
+  font-size: .9em;
+}
+
+.result-button{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  width: 180px;
+  font-size: .7em;
+  font-weight: bold;
+  background-size: 200% 100%;
+  transition: background-position 1s, color 1s;
+  display: block;
+  position: absolute;
+}
+
+.result-button:hover {
+  background-position: 100% 0;
+}
+
+.print-button{
+  top: 100px;
+}
+
+.download-button{
+  top: 150px;
+}
+
+.back-button{
+  top: 200px;
+}
+
+.table-title{
+  color: #555;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    color: #888;
+    font-size: .8em;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+.msg-background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 1;
+}
+
+.msg-click{
+  width: 100%;
+  height: 100%;
+}
+
+.msg-text{
+  font-size: .9em;
+}
+
+.msg-container{
+  background: rgb(255, 255, 255);
+  color: #555;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 450px;
+  height: 250px;
+  position:fixed;
+}
+
+.msg-button{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 20px;
+  width: 180px;
+  font-size: .7em;
+  font-weight: bold;
+  background-size: 200% 100%;
+  transition: background-position 1s, color 1s;
+  display: block;
+  position: absolute;
+}
+
+.msg-button:hover {
+  background-position: 100% 0;
+}
+
+.msg-yes{
+  position: absolute;
+  bottom: 40px;
+}
+
+.msg-no{
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+
+
+

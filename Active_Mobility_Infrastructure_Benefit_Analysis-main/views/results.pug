@@ -1,0 +1,20 @@
+.results-container(style = 'display:none;')
+  .summary-container
+    span.chart-container
+    span.impact-container
+      p.impact-title Impact Results:
+      p.impact-text
+        a.impact-text-npv NPV: 
+        a.impact-value-npv 316.96
+      p.impact-text-2
+        a.impact-text-irr IRR:
+        a.impact-value-irr  11.65 %
+      button.result-button.print-button(type="button") PRINT
+      button.result-button.download-button(type="button") DOWNLOAD
+      button.result-button.back-button(type="button") BACK
+  p.table-title Cost Streams and Indicators:
+  p.con_cost_container
+    a Year 0, Construction Cost: 
+    a.con_cost_text $500
+    a  (Unit: $ 1,000)
+  .table-container

@@ -1,0 +1,56 @@
+.base-calculator-container.calculator-container(style = 'display:none; height: 360px')
+  span.calculator-title Bike Infrastructure Benefit Analysis
+  form#basicForm
+    .basic-form-group.adv-button-container
+      span.param-form-group
+        label 
+          a Project Length
+          a  (km)
+        .param-icon(var_id='2')
+          select(name='projectLength' onchange='toggleCustomInput(this, "customProjectLength")')
+            option(value='10') 10
+            option(value='20') 20
+            option(value='30') 30
+            option(value='custom') Custom...
+          input#customProjectLength(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-question(style = "position: absolute; right: 0px")
+
+        label 
+          a Construction Cost
+          a  ($)
+        .param-icon(var_id='3')
+          select(name='constructionCost' onchange='toggleCustomInput(this, "customConstructionCost")')
+            option(value='100000') $100,000
+            option(value='300000') $300,000
+            option(value='500000') $500,000
+            option(value='custom') Custom...
+          input#customConstructionCost(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-question(style = "position: absolute; right: 0px")
+
+        label 
+          a Maintenance Cost
+          a  ($ per year)
+        .param-icon(var_id='4')
+          select(name='maintenanceCost' onchange='toggleCustomInput(this, "customMaintenanceCost")')
+            option(value='1000') $1,000
+            option(value='5000') $5,000
+            option(value='10000') $10,000
+            option(value='custom') Custom...
+          input#customMaintenanceCost(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-question(style = "position: absolute; right: 0px")
+
+        label 
+          a Population
+          a 
+        .param-icon(var_id='6')
+          select(name='population' onchange='toggleCustomInput(this, "customPopulation")')
+            option(value='1000') 1,000
+            option(value='5000') 5,000
+            option(value='10000') 10,000
+            option(value='custom') Custom...
+          input#customPopulation(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-question(style = "position: absolute; right: 0px")
+
+      span.cal-button-group
+        button.bas-button.cal-button(type="button") CALCULATE
+        button.bas-button.adv-button(type="button") ADVANCED SETUP

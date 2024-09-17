@@ -1,0 +1,134 @@
+.adv-calculator-container.calculator-container(style = 'display:none;')
+  span.calculator-title Bike Infrastructure Benefit Analysis
+  .basic-form-group
+    label(for='location') Choose default values similiar to:
+    span.select-icon
+      i.fa.fa-globe
+      select#location
+        option(value='1') United States
+        option(value='1') South America
+      button.adv-adv-button.adv-cal-button(type="button") CALCULATE
+      button.adv-adv-button.adv-bas-button(type="button") BASIC SETUP
+      button.adv-adv-button.adv-edt-button(type="button") EDIT PARAMETERS
+  span.input-container
+    .param-container
+      p.param-title General Parameters
+      span.param-form-group-adv
+        label 
+          a Project Life
+          a  (Years)
+        .param-icon(var_id='1')
+          input(type='text' value="20")
+          i.fa.fa-question
+        label 
+          a Project Length
+          a  (miles)
+        .param-icon(var_id='2')
+          input(type='text' value="10")
+          i.fa.fa-question
+        label 
+          a Construction Cost
+          a  ($)
+        .param-icon(var_id='3')
+          input(type='text' value="300000")
+          i.fa.fa-question
+        label 
+          a Maintenance Cost
+          a  ($ per year)
+        .param-icon(var_id='4')
+          input(type='text' value="5000")
+          i.fa.fa-question
+        label 
+          a Interest Rate
+          a 
+        .param-icon(var_id='5')
+          input(type='text' value="0.06")
+          i.fa.fa-question
+        label 
+          a Population
+          a 
+        .param-icon(var_id='6')
+          input(type='text' value="5000")
+          i.fa.fa-question
+        label 
+          a Trip Purpose Composition
+          a 
+        .param-icon(var_id='7')
+          input(type='text' value="[0.186, 0.353, 0.461]")
+          i.fa.fa-question
+        label 
+          a Bike Volume Groth Rate
+          a 
+        .param-icon(var_id='8')
+          input(type='text' value="0.08")
+          i.fa.fa-question
+        label 
+          a Vehicle Occupancy
+          a 
+        .param-icon(var_id='9')
+          input(type='text' value="1.51")
+          i.fa.fa-question
+        label 
+          a Percentage of Cyclists in the Population
+          a 
+        .param-icon(var_id='10')
+          input(type='text' value="54.9%")
+          i.fa.fa-question
+  span.input-container
+    .param-container
+      p.param-title Accident Prevention Parameters
+      span.param-form-group-adv
+        label 
+          a Average Cost of Crashes
+          a  ($)
+        .param-icon(var_id='11')
+          input(type='text' value="126400")
+          i.fa.fa-question
+        label 
+          a Crash Rate
+          a 
+        .param-icon(var_id='12')
+          input(type='text' value="1.04")
+          i.fa.fa-question
+        label 
+          a Diversion from Cars
+          a 
+        .param-icon(var_id='13')
+          input(type='text' value="0.5")
+          i.fa.fa-question
+    .param-container
+      p.param-title Health Benefit Parameters
+      span.param-form-group-adv
+        label 
+          a All-cause Mortality
+          a 
+        .param-icon(var_id='14')
+          input(type='text' value="252")
+          i.fa.fa-question
+        label 
+          a Annul reduction of Mortality
+          a 
+        .param-icon(var_id='15')
+          input(type='text' value="23%")
+          i.fa.fa-question
+        label 
+          a Statistical Value of Life
+          a  ($)
+        .param-icon(var_id='16')
+          input(type='text' value="12700000")
+          i.fa.fa-question
+    .param-container
+      p.param-title Emission Reduction Parameters
+      span.param-form-group-adv
+        label 
+          a Emission Cost
+          a  ($ per ton)
+        .param-icon(var_id='17')
+          input(type='text' value="48")
+          i.fa.fa-question
+        label 
+          a Vehicle Emission Rate
+          a  (g per mile)
+        .param-icon(var_id='18')
+          input(type='text' value="331.98")
+          i.fa.fa-question

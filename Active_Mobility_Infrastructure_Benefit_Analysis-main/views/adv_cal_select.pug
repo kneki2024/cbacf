@@ -1,0 +1,332 @@
+.adv-calculator-container.calculator-container(style = 'display:none;')
+  span.calculator-title Cycling Facility Benefit Analysis
+  .basic-form-group.adv-form-select
+    //- label(for='location') Choose default values similiar to:
+    span.select-icon
+      //- i.fa.fa-globe
+      //- select#location
+      //-   option(value='1') United States
+      //-   option(value='1') South America
+      button.adv-adv-button.adv-cal-button(type="button") CALCULATE
+      button.adv-adv-button.adv-bas-button(type="button") BACK
+      //- button.adv-adv-button.adv-edt-button(type="button") EDIT PARAMETERS
+  span.input-container
+    .param-container
+      p.param-title Project Basic Parameters
+      span.param-form-group-adv
+        label 
+          a Project Length
+          a  (km)
+        .param-icon.adv-input-container(var_id='1001')
+          input(type='text' value="10")
+          i.fa.fa-question
+        label 
+          a Construction Cost
+          a  ($)
+        .param-icon.adv-input-container(var_id='1002')
+          input(type='text' value="300000")
+          i.fa.fa-question
+        label 
+          a Maintenance Cost
+          a  ($ per year)
+        .param-icon.adv-input-container(var_id='1003')
+          input(type='text' value="5000")
+          i.fa.fa-question
+        label 
+          a Population
+          a 
+        .param-icon.adv-input-container(var_id='1004')
+          input(type='text' value="5000")
+          i.fa.fa-question
+    .param-container(style="top:50px")
+      p.param-title Safety Benefit Parameters
+      span.param-form-group-adv
+        label 
+          a Serious Injury to Fatal Car Crash Ratio
+          a 
+        .param-icon(var_id='25')
+          select(name='SIF' onchange='toggleCustomInput(this, "customSIF")')
+            option(value='custom') Custom...
+          input#customSIF(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label(style="display: none;") 
+          a Average Cost of Crashes
+          a  ($)
+        .param-icon(var_id='8' style="display: none;")
+          select(name='averageCostOfCrashes' onchange='toggleCustomInput(this, "customAverageCostOfCrashes")')
+            option(value='custom') Custom...
+          input#customAverageCostOfCrashes(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label(style="display: none;") 
+          a Average Cost of Cycling Crashes
+          a  ($)
+        .param-icon(var_id='9' style="display: none;")
+          select(name='averageCostOfBikeCrashes' onchange='toggleCustomInput(this, "customAverageCostOfBikeCrashes")')
+            option(value='custom') Custom...
+          input#customAverageCostOfBikeCrashes(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Fatal-serious Injury Car Crash Rate (/ Billion-km)
+          a 
+        .param-icon(var_id='10')
+          select(name='crashRate' onchange='toggleCustomInput(this, "customCrashRate")')
+            option(value='custom') Custom...
+          input#customCrashRate(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Fatal-serious Cycling Crash Rate (/ Billion-km)
+          a 
+        .param-icon(var_id='11')
+          select(name='crashRateBike' onchange='toggleCustomInput(this, "customCrashRateBike")')
+            option(value='custom') Custom...
+          input#customCrashRateBike(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Crash Modification Factor for existing cyclist-involved crashes
+          a 
+        .param-icon(var_id='12')
+          select(name='CMF' onchange='toggleCustomInput(this, "customCMF")')
+            option(value='custom') Custom...
+          input#customCMF(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+  span.input-container
+    .param-container
+      p.param-title General Parameters
+      span.param-form-group-adv
+        label
+          a Evaluation Period
+          a (Years)
+        .param-icon(var_id='24')
+          select(name='projectLife' onchange='toggleCustomInput(this, "customProjectLife")')
+            option(value='custom') Custom...
+          input#customProjectLife(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Discount Rate
+          a (e.g., 12% = 0.12)
+        .param-icon(var_id='23')
+          select(name='interestRate' onchange='toggleCustomInput(this, "customInterestRate")')
+            option(value='custom') Custom...
+          input#customInterestRate(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Trip Purpose Composition (Commuting)
+          a (e.g., 25% = 0.25)
+        .param-icon(var_id='1')
+          select(name='tripPurposeCompositionCommute' onchange='toggleCustomInput(this, "customTripPurposeCompositionCommute")')
+            option(value='custom') Custom...
+          input#customTripPurposeCompositionCommute(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Trip Purpose Composition (Recreational)
+          a (e.g., 25% = 0.25)
+        .param-icon(var_id='3')
+          select(name='tripPurposeCompositionRecreational' onchange='toggleCustomInput(this, "customTripPurposeCompositionRecreational")')
+            option(value='custom') Custom...
+          input#customTripPurposeCompositionRecreational(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Annual Cycling Volume Growth Rate
+          a (e.g., 5% = 0.05)
+        .param-icon(var_id='4')
+          select(name='bikeVolumeGrowthRate' onchange='toggleCustomInput(this, "customBikeVolumeGrowthRate")')
+            option(value='custom') Custom...
+          input#customBikeVolumeGrowthRate(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Vehicle Occupancy
+          a (people / vehicle)
+        .param-icon(var_id='5')
+          select(name='vehicleOccupancy' onchange='toggleCustomInput(this, "customVehicleOccupancy")')
+            option(value='custom') Custom...
+          input#customVehicleOccupancy(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Percentage of Cyclists in the Population
+          a 
+        .param-icon(var_id='6')
+          select(name='percentageCyclists' onchange='toggleCustomInput(this, "customPercentageCyclists")')
+            option(value='custom') Custom...
+          input#customPercentageCyclists(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label
+          a Induced Factor
+          a 
+        .param-icon(var_id='7')
+          select(name='IndFactor' onchange='toggleCustomInput(this, "customInducedFactor")')
+            option(value='custom') Custom...
+          input#customInducedFactor(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+    .param-container(style="top:270px")
+      p.param-title Emission Reduction Parameters
+      span.param-form-group-adv
+        label 
+          a Emission Cost
+          a 
+        .param-icon(var_id='201')
+          label.emission_label
+            input(type="radio", name="emissionCost", value="Min" checked)
+            | Lower
+          //- label.emission_label
+          //-   input(type="radio", name="emissionCost", value="Med")
+          //-   | Med
+          label.emission_label
+            input(type="radio", name="emissionCost", value="Max")
+            | Upper
+          i.fa.fa-question
+        label 
+          a Vehicle Emission Rate
+          a  (g per km)
+        .param-icon(var_id='15')
+          select(name='vehicleEmissionRate' onchange='toggleCustomInput(this, "customVehicleEmissionRate")')
+            option(value='custom') Custom...
+          input#customVehicleEmissionRate(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+  span.input-container.third_column
+    .param-container
+      p.param-title Time Saving Parameters
+      span.param-form-group-adv
+        label 
+          a Diversion from Cars to Cycling
+          a (e.g., 25% = 0.25)
+        .param-icon(var_id='16')
+          select(name='diversionFromCars' onchange='toggleCustomInput(this, "customDiversionFromCars")')
+            option(value='custom') Custom...
+          input#customDiversionFromCars(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Diversion from Walk to Cycling
+          a (e.g., 25% = 0.25)
+        .param-icon(var_id='17')
+          select(name='diversionFromWalk' onchange='toggleCustomInput(this, "customDiversionFromWalk")')
+            option(value='custom') Custom...
+          input#customDiversionFromWalk(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Diversion from Transit to Cycling
+          a (e.g., 25% = 0.25)
+        .param-icon(var_id='18')
+          select(name='diversionFromTransit' onchange='toggleCustomInput(this, "customDiversionFromTransit")')
+            option(value='custom') Custom...
+          input#customDiversionFromTransit(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Average Speed of Cycling
+          a (km/h)
+        .param-icon(var_id='19')
+          select(name='averageSpeedBike' onchange='toggleCustomInput(this, "customAverageSpeedBike")')
+            option(value='custom') Custom...
+          input#customAverageSpeedBike(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Average Speed of Walk
+          a (km/h)
+        .param-icon(var_id='20')
+          select(name='averageSpeedWalk' onchange='toggleCustomInput(this, "customAverageSpeedWalk")')
+            option(value='custom') Custom...
+          input#customAverageSpeedWalk(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Average Speed of Transit
+          a (km/h)
+        .param-icon(var_id='21')
+          select(name='averageSpeedTransit' onchange='toggleCustomInput(this, "customAverageSpeedTransit")')
+            option(value='custom') Custom...
+          input#customAverageSpeedTransit(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Average Speed of Car
+          a (km/h)
+        .param-icon(var_id='22')
+          select(name='averageSpeedCars' onchange='toggleCustomInput(this, "customAverageSpeedCars")')
+            option(value='custom') Custom...
+          input#customAverageSpeedCars(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Value of Time
+          a (US$/h)
+        .param-icon(var_id='301')
+          select(name='valueOfTime' onchange='toggleCustomInput(this, "customValueOfTime")')
+            option(value='custom') Custom...
+          input#customValueOfTime(type='text' style='display:none;' placeholder='Enter custom value')
+          //- i.fa.fa-plus
+          //- i.fa.fa-minus
+          i.fa.fa-question
+    .param-container(style="top:230px")
+      p.param-title Health Benefit Parameters
+      span.param-form-group-adv
+        label 
+          a All-cause Mortality
+          a 
+        .param-icon(var_id='13')
+          select(name='allCauseMortality' onchange='toggleCustomInput(this, "customAllCauseMortality")')
+            option(value='custom') Custom...
+          input#customAllCauseMortality(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Annual Reduction of Mortality
+          a 
+        .param-icon(var_id='14')
+          select(name='annualReductionOfMortality' onchange='toggleCustomInput(this, "customAnnualReductionOfMortality")')
+            option(value='custom') Custom...
+          input#customAnnualReductionOfMortality(type='text' style='display:none;' placeholder='Enter custom value')
+          i.fa.fa-plus
+          i.fa.fa-minus
+          i.fa.fa-question
+        label 
+          a Statistical Value of Life
+          a  ($)
+        .param-icon(var_id='302')
+          select(name='statisticalValueOfLife' onchange='toggleCustomInput(this, "customStatisticalValueOfLife")')
+            option(value='custom') Custom...
+          input#customStatisticalValueOfLife(type='text' style='display:none;' placeholder='Enter custom value')
+          //- i.fa.fa-plus
+          //- i.fa.fa-minus
+          i.fa.fa-question
+    

@@ -1,0 +1,44 @@
+.base-calculator-container.calculator-container(style = 'display:none;')
+  span.calculator-title Cycling Facility Benefit Analysis
+  form#basicForm
+    .basic-form-group
+      label(for='location') Country:
+      span.select-icon
+        i.fa.fa-globe
+        select.terms-select(id="country-select")
+          option(value="") --Select a Country--
+        label(for="city-select", style="margin-left: 10px") Project Name:
+          input.terms-select(id="city-select")
+        //- select#location
+        //-   option(value='1') United States
+        //-   option(value='2') South America
+        //- span.basic-about About
+    .basic-form-group
+      span.param-form-group
+        label 
+          a Project Length
+          a  (km)
+        .param-icon.bas-input-container(var_id='1001')
+          input(type='text' value="10")
+          i.fa.fa-question
+        label 
+          a Construction Cost
+          a  ($)
+        .param-icon.bas-input-container(var_id='1002')
+          input(type='text' value="300000")
+          i.fa.fa-question
+        label 
+          a Maintenance Cost
+          a  ($ per year)
+        .param-icon.bas-input-container(var_id='1003')
+          input(type='text' value="5000")
+          i.fa.fa-question
+        label 
+          a Population within 300 meters of the cycling facility
+          a 
+        .param-icon.bas-input-container(var_id='1004')
+          input(type='text' value="5000")
+          i.fa.fa-question
+      span.cal-button-group
+        //- button.bas-button.cal-button(type="button") CALCULATE
+        button.bas-button.adv-button(type="button") NEXT STEP

@@ -1,0 +1,82 @@
+.adv-calculator-container{
+  background: rgb(255, 255, 255);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  width: 800px;
+  height: 730px;
+  position:fixed;
+}
+
+.adv-adv-button{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #53d2d6, #6558df, #df00f3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  font-size: .7em;
+  font-weight: bold;
+  background-size: 200% 100%;
+  transition: background-position 1s, color 1s;
+  display: block;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+.adv-adv-button:hover{
+  background-position: 100% 0;
+}
+
+.adv-cal-button{
+  right: 0px;
+}
+
+.adv-bas-button{
+  right: 140px;
+}
+
+.adv-edt-button{
+  right: 280px;
+  background: #CC0000 !important;
+}
+
+.adv-edt-button:hover{
+  text-shadow: 0 0 10px #FF6666, 0 0 10px #FF6666, 0 0 10px #FF6666;
+}
+
+.input-container{
+  width: 50%;
+  height: 80%;
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  color: rgb(90, 90, 90);
+  font-size: .8em;  
+}
+
+.param-container{
+  top: 10px;
+  position: relative;
+  height: 197.63px;
+}
+
+.param-form-group-adv{
+  width: 95%;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+.param-title{
+  position: absolute;
+  left: 10px;
+  margin: 0;
+  top: -10px;
+  background: #fff;
+  font-size: 1.1em;
+  z-index: 1;
+}
